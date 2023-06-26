@@ -1,0 +1,22 @@
+PODS:
+  - app_icon_switcher (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - app_icon_switcher (from `.symlinks/plugins/app_icon_switcher/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  app_icon_switcher:
+    :path: ".symlinks/plugins/app_icon_switcher/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  app_icon_switcher: ce0ffd4bf98dc9a98d9fc61115792c4212cab272
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+
+PODFILE CHECKSUM: 6b9eb94e9f98a329f2ef624b852a6e42d090af2b
+
+COCOAPODS: 1.12.1

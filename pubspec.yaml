@@ -1,11 +1,10 @@
 name: app_icon_switcher
-description: A new Flutter package project.
+description: A Flutter package which allows you to change the apps icon within the app
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
-  flutter: ">=1.17.0"
+  flutter: '>=1.17.0'
 
 dependencies:
   flutter:
@@ -21,6 +20,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  plugin:
+    platforms:
+      ios:
+        pluginClass: SwiftAppIconSwitcherPlugin
 
   # To add assets to your package, add an assets section, like this:
   # assets:
