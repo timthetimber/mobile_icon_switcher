@@ -10,6 +10,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
+    de.timthetimber.iconswitcher.IconSwitcherPlugin.registerWith(registry.registrarFor("de.timthetimber.iconswitcher.IconSwitcherPlugin"))
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

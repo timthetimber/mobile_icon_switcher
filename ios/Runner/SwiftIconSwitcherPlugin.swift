@@ -3,7 +3,7 @@ import Flutter
 import UIKit
 
 // Declaring a public class for the plugin that inherits from NSObject and implements the FlutterPlugin protocol.
-public class SwiftAppIconSwitcherPlugin: NSObject, FlutterPlugin {
+public class SwiftIconSwitcherPlugin: NSObject, FlutterPlugin {
 
   // The register method is called by the Flutter framework when the plugin is registered. 
   // It sets up a method channel for communication between the Dart and native code.
@@ -14,7 +14,7 @@ public class SwiftAppIconSwitcherPlugin: NSObject, FlutterPlugin {
     let channel = FlutterMethodChannel(name: "app_icon_switcher", binaryMessenger: registrar.messenger())
     
     // Creating an instance of the plugin class.
-    let instance = SwiftAppIconSwitcherPlugin()
+    let instance = SwiftIconSwitcherPlugin()
     
     // Setting the instance of the plugin class as the delegate for method calls coming over the channel.
     registrar.addMethodCallDelegate(instance, channel: channel)
