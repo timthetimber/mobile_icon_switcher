@@ -25,7 +25,6 @@
                 </array>
             </dict>
         </dict>
-        
     </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
