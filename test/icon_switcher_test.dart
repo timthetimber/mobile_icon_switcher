@@ -1,9 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:icon_switcher/icon_switcher.dart';
-
-class MockMethodChannel extends Mock implements MethodChannel {}
 
 void main() {
   const testChannel = MethodChannel('app_icon_switcher');
@@ -13,7 +10,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
 
-    TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(testChannel, (call) async {
       switch (call.method) {
         case 'getPlatformVersion':
