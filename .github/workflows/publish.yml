@@ -24,7 +24,5 @@ jobs:
         run: flutter pub get
       # Here you can insert custom steps you need
       # - run: dart tool/generate-code.dart
-      
-      - name: Publish package
-        uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-        
+      - name: Publish
+        run: dart pub publish --force
