@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Flutter
-        uses: actions/setup-flutter@v1
+      - name: Setup Flutter SDK
+        uses: flutter-actions/setup-flutter@v2.2
         with:
           channel: 'stable' # you can choose the Flutter channel you prefer: stable, beta, dev or master
 
