@@ -1,10 +1,9 @@
-# .github/workflows/publish.yml
 name: Publish to pub.dev
 
 on:
   push:
     tags:
-    - 'v[0-9]+.[0-9]+.[0-9]+*' # tag pattern on pub.dev: 'v'
+      - 'v[0-9]+.[0-9]+.[0-9]+*' # tag pattern on pub.dev: 'v'
 
 # Publish using custom workflow
 jobs:
@@ -14,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: actions/setup-flutter@v1
+        with:
+          channel: 'stable' # you can choose the Flutter channel you prefer: stable, beta, dev or master
+
       - uses: dart-lang/setup-dart@v1
       - name: Install dependencies
         run: flutter pub get
