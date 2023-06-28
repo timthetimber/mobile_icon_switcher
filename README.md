@@ -1,14 +1,14 @@
-# Icon Switcher
+# Mobile Icon Switcher
 
-[![pub package](https://img.shields.io/pub/v/icon_switcher.svg)](https://pub.dev/packages/icon_switcher)
-[![GitHub](https://img.shields.io/github/license/timthetimber/icon_switcher)](https://github.com/timthetimber/icon_switcher/blob/main/LICENSE)
-[![GitHub Repo stars](https://img.shields.io/github/stars/timthetimber/icon_switcher?style=social)](https://github.com/timthetimber/icon_switcher/stargazers)
+[![pub package](https://img.shields.io/pub/v/mobile_icon_switcher.svg)](https://pub.dev/packages/mobile_icon_switcher)
+[![GitHub](https://img.shields.io/github/license/timthetimber/mobile_icon_switcher)](https://github.com/timthetimber/mobile_icon_switcher/blob/main/LICENSE)
+[![GitHub Repo stars](https://img.shields.io/github/stars/timthetimber/mobile_icon_switcher?style=social)](https://github.com/timthetimber/mobile_icon_switcher/stargazers)
 
-Icon Switcher is a plugin that makes changing your app's icon within the app easy. See a short demo below:
+Mobile Icon Switcher is a plugin that makes changing your app's icon within the app easy. See a short demo below:
 
 ## Demo
 
-<img src="https://github.com/timthetimber/icon_switcher/raw/main/.github/images/demo.gif"  width="400"/>
+<img src="https://github.com/timthetimber/mobile_icon_switcher/raw/main/.github/images/demo.gif"  width="400"/>
 
 ## How to use
 
@@ -181,19 +181,19 @@ class First: FlutterActivity() {
 Sadly we also have one different thing to setup here for Android:
 
 ```Dart
-IconSwitcher.setDefaultComponent("com.example.example.MainActivity");
+MobileIconSwitcher.setDefaultComponent("com.example.example.MainActivity");
 ```
 
 This we need to call when our App starts, please also feel free to look into my example App how I did this. Important here, the applicationId and the MainActivity name must be correct, please double check this in case of errors.
 
 </details>
 
-## Using the Icon_Switcher in a Flutter App
+## Using the mobile_icon_switcher in a Flutter App
 
 To now switch the icon after you are done with the IOS and/or Android Setup above you can just call this method:
 
 ```dart
-await IconSwitcher.changeIcon('first', 'com.example.example.First');
+await MobileIconSwitcher.changeIcon('first', 'com.example.example.First');
 ```
 
 The first argument here is the IconName, this part is necessary for IOS mostly, the second argument is the Activity with the ApplicationId of Android.

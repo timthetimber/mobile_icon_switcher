@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:icon_switcher/icon_switcher.dart';
+import 'package:mobile_icon_switcher/mobile_icon_switcher.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,7 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key}) {
-    IconSwitcher.setDefaultComponent("com.example.example.MainActivity");
+    MobileIconSwitcher.setDefaultComponent("com.example.example.MainActivity");
   }
 
   @override
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> switchAppIcon(String name) async {
     try {
-      await IconSwitcher.changeIcon(name,
+      await MobileIconSwitcher.changeIcon(name,
           'com.example.example.${name[0].toUpperCase()}${name.substring(1).toLowerCase()}');
     } on PlatformException catch (e) {
       print('Error while trying to switch the apps icon');

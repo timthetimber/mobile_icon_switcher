@@ -1,4 +1,4 @@
-group 'de.timthetimber.iconswitcher'
+group 'de.timthetimber.mobileiconswitcher'
 version '1.0.0'
 
 buildscript {

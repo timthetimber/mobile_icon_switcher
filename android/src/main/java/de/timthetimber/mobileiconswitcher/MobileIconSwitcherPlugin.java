@@ -1,4 +1,4 @@
-package de.timthetimber.iconswitcher;
+package de.timthetimber.mobileiconswitcher;
 import androidx.annotation.NonNull;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
@@ -16,7 +16,7 @@ import android.content.pm.PackageInfo;
 
 import java.util.*;
 
-public class IconSwitcherPlugin implements FlutterPlugin, MethodCallHandler {
+public class MobileIconSwitcherPlugin implements FlutterPlugin, MethodCallHandler {
     private MethodChannel channel;
     private PackageManager packageManager;
     private ComponentName defaultComponent;

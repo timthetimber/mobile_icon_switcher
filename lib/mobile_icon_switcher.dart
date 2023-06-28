@@ -1,11 +1,11 @@
-library icon_switcher;
+library mobile_icon_switcher;
 
 import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
 
-class IconSwitcher {
+class MobileIconSwitcher {
   static const MethodChannel _channel = MethodChannel('app_icon_switcher');
 
   static Future<String> get platformVersion async {

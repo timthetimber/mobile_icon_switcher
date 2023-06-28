@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  icon_switcher:
+  mobile_icon_switcher:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

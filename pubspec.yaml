@@ -1,7 +1,7 @@
-name: icon_switcher
+name: mobile_icon_switcher
 description: A Flutter package which allows you to change the apps icon within the app
 version: 0.0.1
-repository: https://github.com/timthetimber/icon_switcher
+repository: https://github.com/timthetimber/mobile_icon_switcher
 environment:
   sdk: '>=3.0.5 <4.0.0'
   flutter: '>=1.17.0'
@@ -26,10 +26,10 @@ flutter:
   plugin:
     platforms:
       ios:
-        pluginClass: SwiftIconSwitcherPlugin
+        pluginClass: SwiftMobileIconSwitcherPlugin
       android:
-        package: de.timthetimber.iconswitcher
-        pluginClass: IconSwitcherPlugin
+        package: de.timthetimber.mobileiconswitcher
+        pluginClass: MobileIconSwitcherPlugin
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
