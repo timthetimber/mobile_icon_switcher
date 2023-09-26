@@ -59,5 +59,27 @@ public class SwiftMobileIconSwitcherPlugin: NSObject, FlutterPlugin {
         result(FlutterError(code: "UNAVAILABLE", message: "Alternate icons not supported.", details: nil))
       }
     }
+    else if call.method == "resetIcon" {
+            // Checking if the device supports alternate app icons.
+      if UIApplication.shared.supportsAlternateIcons {
+      
+        // Attempting to change the app icon.
+        UIApplication.shared.setAlternateIconName(nil) { error in
+        
+          // If there is an error, we send it back to the Dart side.
+          if let error = error {
+            result(FlutterError(code: "UNAVAILABLE", message: error.localizedDescription, details: nil))
+          } 
+          // If there is no error, we send true back to the Dart side to indicate success.
+          else {
+            result(true)
+          }
+        }
+      } 
+      // If the device does not support alternate app icons, we send an error back to the Dart side.
+      else {
+        result(FlutterError(code: "UNAVAILABLE", message: "Alternate icons not supported.", details: nil))
+      }
+    }
   }
 }

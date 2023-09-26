@@ -59,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text("Second Icon"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                resetAppIcon();
+              },
+              child: const Text("Reset Icon"),
+            ),
           ],
         ),
       ),
@@ -71,6 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
           'com.example.example.${name[0].toUpperCase()}${name.substring(1).toLowerCase()}');
     } on PlatformException catch (e) {
       print('Error while trying to switch the apps icon');
+    }
+  }
+
+  Future<void> resetAppIcon() async {
+    try {
+      await MobileIconSwitcher.resetIcon();
+    } on PlatformException catch (e) {
+      print('Error while trying to reset the apps icon');
     }
   }
 }

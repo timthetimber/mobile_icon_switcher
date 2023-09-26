@@ -190,6 +190,8 @@ This we need to call when our App starts, please also feel free to look into my 
 
 ## Using the mobile_icon_switcher in a Flutter App
 
+### Switching the Apps Icon
+
 To now switch the icon after you are done with the IOS and/or Android Setup above you can just call this method:
 
 ```dart
@@ -197,6 +199,20 @@ await MobileIconSwitcher.changeIcon('first', 'com.example.example.First');
 ```
 
 The first argument here is the IconName, this part is necessary for IOS mostly, the second argument is the Activity with the ApplicationId of Android.
+
+---
+
+### Reseting the Apps Icon to default
+
+To revert the app icon to its default after you have completed the iOS and/or Android Setup mentioned above, you can simply call this method:
+
+```dart
+await MobileIconSwitcher.resetIcon();
+```
+
+This method doesn’t require any arguments. Calling this will reset the app icon to the default one set in your project, whether you’re on iOS or Android. Remember to handle any possible errors that might occur while resetting, ensuring a smooth user experience.
+
+Note: For IOS there is a real option to reset the App's icon for Android, there isn't therefore I will just set the Default Component as the "new" App Icon.
 
 ## Note
 

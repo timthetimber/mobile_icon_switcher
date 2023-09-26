@@ -59,4 +59,22 @@ class MobileIconSwitcher {
     }
     return true;
   }
+
+  /// The function `resetIcon` is a static method in Dart that invokes a platform-specific method called
+  /// 'resetIcon'. This call will reset the App's Icon to the default value.
+  ///
+  /// For IOS:
+  ///   There is an actual reset, so I do a real reset
+  ///
+  /// For Android:
+  ///   I only set the defaultComponent to put the app in the state it
+  ///   was before.
+  ///
+  /// Returns:
+  ///   The method is returning a Future<bool> value, which states if the reset
+  ///   was successful or not.
+  static Future<bool> resetIcon() async {
+    final bool success = await _channel.invokeMethod('resetIcon', null);
+    return success;
+  }
 }

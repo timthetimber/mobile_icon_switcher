@@ -59,6 +59,9 @@ public class MobileIconSwitcherPlugin implements FlutterPlugin, MethodCallHandle
             } else {
                 result.error("NO_ICON_OR_ALIAS", "No icon name or activity alias was provided.", null);
             }
+        } else if(call.method.equals("resetIcon")){
+            enableComponent(defaultComponent);
+            disableComponents();
         } else {
             result.notImplemented();
         }
