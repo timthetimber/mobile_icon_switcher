@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Added reset functionality
+
 ## 1.0.0
 
 - First automated release
