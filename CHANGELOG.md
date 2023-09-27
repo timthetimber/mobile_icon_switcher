@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Little fix in Git Repo
+
 ## 1.1.0
 
 - Added reset functionality
